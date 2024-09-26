@@ -50,12 +50,12 @@ h1 {
     @media #{$tab-layout} {
       font-size: 20px;
       line-height: 20px;
-      text-align: center;
+      letter-spacing: 1px;
     }
     @media #{$desktop-layout} {
       font-size: 20px;
       line-height: 20px;
-      text-align: center;
+      letter-spacing: 1px;
     }
     @media #{$xl-layout} {
       font-size: 25px;
@@ -95,7 +95,6 @@ header {
     }
     @media #{$tab-layout} {
       width: 100%;
-      justify-content: space-between;
     }
     @media #{$desktop-layout} {
       width: 100%;
@@ -128,7 +127,7 @@ button {
   }
   @media #{$tab-layout} {
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
     padding: 0 10px;
   }
   @media #{$desktop-layout} {
@@ -203,8 +202,8 @@ button {
     @media #{$tab-layout} {
       top: calc(50% + 18.5vh);
       right: calc(50% + 4px);
-      width: 0;
-      height: 0;
+      width: 275px;
+      height: 1px;
     }
     @media #{$desktop-layout} {
       top: calc(50% + 18.5vh);
@@ -231,9 +230,10 @@ button {
         @include linear-gradient(to bottom, $grey, $grey, transparent);
       }
       @media #{$tab-layout} {
-        left: 2px;
-        bottom: -150px;
+        left: -63px;
+        bottom: -33.8px;
         @include linear-gradient(to bottom, $grey, $grey, transparent);
+        transform: rotate(123deg);
       }
       @media #{$desktop-layout} {
         left: -63px;
@@ -258,12 +258,6 @@ button {
     justify-content: center;
     align-items: center;
   }
-  @media #{$tab-layout} {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 
   .title {
     &.gradient {
@@ -274,7 +268,7 @@ button {
         @include linear-gradient(to bottom, $white, $red, $red);
       }
       @media #{$tab-layout} {
-        @include linear-gradient(to bottom, $white, $red, $red);
+        @include linear-gradient(to right, $white, $red, $red);
       }
       @media #{$desktop-layout} {
         @include linear-gradient(to right, $white, $red, $red);
@@ -313,8 +307,7 @@ button {
       left: calc(50% - 90px);
     }
     @media #{$tab-layout} {
-      bottom: 90px;
-      left: calc(50% - 90px);
+      top: calc(50% + 3vb);
     }
     @media #{$desktop-layout} {
       top: calc(50% + 3vb);
@@ -703,9 +696,6 @@ button {
     margin-top: 30px;
   }
   @media #{$tab-layout} {
-    align-self: center;
-    align-items: center;
-    justify-content: center;
     width: 350px;
     margin-top: 30px;
   }
