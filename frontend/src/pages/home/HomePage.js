@@ -50,7 +50,7 @@ const HomePage = () => {
                   </div>
 
                 </>)}
-              // <AdvantagesItem key={index} item={item} index={index}/>
+              {/*<AdvantagesItem key={index} item={item} index={index}/>*/}
             </section>
             {/*<AdvantagesWrapper/>*/}
           </div>
