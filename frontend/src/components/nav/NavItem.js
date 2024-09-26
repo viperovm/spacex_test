@@ -5,6 +5,8 @@ const NavItem = ({item}) => {
 
   const url = window.location.href
 
+  console.log(url)
+
   return (
     <>
       {item
