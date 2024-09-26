@@ -216,15 +216,15 @@ button {
       height: 0;
     }
     @media #{$tab-layout} {
-      top: calc(50% + 20vh);
+      top: calc(50% + 21vh);
       right: calc(50% + 4px);
-      width: 250px;
+      width: 150px;
       height: 1px;
     }
     @media #{$desktop-layout} {
-      top: calc(50% + 20vh);
+      top: calc(50% + 21vh);
       right: calc(50% + 4px);
-      width: 250px;
+      width: 150px;
       height: 1px;
     }
     @media #{$xl-layout} {
