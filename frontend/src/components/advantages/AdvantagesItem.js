@@ -5,12 +5,12 @@ const AdvantagesItem = ({item, index}) => {
   const ProperMiddle = ({data}) => {
 
     console.log(data)
-    console.log(data.replace(/[^a-zA-Z]/g, ""))
+    console.log(data.replace(/[^a-zA-ZА-Яа-я]/g, ""))
     console.log(data.replace(/[^0-9]/g, ""))
 
-    if (data.replace(/[^a-zA-Z]/g, "")) {
+    if (data.replace(/[^a-zA-ZА-Яа-я]/g, "")) {
       return (
-        <div className='advantage-middle'>{data.replace(/[^0-9]/g, "")}<span>{data.replace(/[^a-zA-Z]/g, "")}</span></div>
+        <div className='advantage-middle'>{data.replace(/[^0-9]/g, "")}<span>{data.replace(/[^a-zA-ZА-Яа-я]/g, "")}</span></div>
       )
     } else {
       return (
