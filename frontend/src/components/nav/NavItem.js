@@ -2,9 +2,19 @@ import React from 'react';
 import {Link} from "react-router-dom";
 
 const NavItem = ({item}) => {
+
+  const url = window.location.href
+
   return (
     <>
-      {item && <Link to={item?.url} className="menu-item">{item?.name}</Link>}
+      {item
+      &&
+      <Link
+        to={item?.url}
+        className={`menu-item${item?.url === url ? ' active' : ''}`}
+      >
+        {item?.name}
+      </Link>}
     </>
   );
 };

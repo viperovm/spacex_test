@@ -4,7 +4,6 @@ import AdvantagesWrapper from "../../components/advantages/AdvantagesWrapper";
 import TitleWrapper from "../../components/TitleWrapper";
 
 const HomePage = () => {
-
   return (
     <div className="main-layout image arrow">
       <Header/>
