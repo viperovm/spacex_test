@@ -99,7 +99,6 @@ header {
     }
     @media #{$desktop-layout} {
       width: 100%;
-      justify-content: space-between;
     }
     @media #{$xl-layout} {
       width: 1190px;
