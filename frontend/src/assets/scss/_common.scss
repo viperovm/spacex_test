@@ -95,9 +95,11 @@ header {
     }
     @media #{$tab-layout} {
       width: 100%;
+      justify-content: space-between;
     }
     @media #{$desktop-layout} {
       width: 100%;
+      justify-content: space-between;
     }
     @media #{$xl-layout} {
       width: 1190px;
@@ -178,14 +180,28 @@ button {
   &.image::after {
     content: '';
     position: absolute;
-    top: calc(50% + 18vh);
-    right: calc(50% - 4px);
     width: 10px;
     height: 10px;
     background-color: #fff;
     border: 2px solid #000;
     border-radius: 50%;
     z-index: 1;
+    @media #{$mobile-layout} {
+      top: calc(50% + 18vh);
+    right: calc(50% - 4px);
+    }
+    @media #{$tab-layout} {
+      top: calc(50% + 20vh);
+    right: calc(50% - 4px);
+    }
+    @media #{$desktop-layout} {
+      top: calc(50% + 20vh);
+    right: calc(50% - 4px);
+    }
+    @media #{$xl-layout} {
+      top: calc(50% + 18vh);
+    right: calc(50% - 4px);
+    }
   }
 
   .arrow {
@@ -200,15 +216,15 @@ button {
       height: 0;
     }
     @media #{$tab-layout} {
-      top: calc(50% + 18.5vh);
+      top: calc(50% + 20vh);
       right: calc(50% + 4px);
-      width: 275px;
+      width: 250px;
       height: 1px;
     }
     @media #{$desktop-layout} {
-      top: calc(50% + 18.5vh);
+      top: calc(50% + 20vh);
       right: calc(50% + 4px);
-      width: 275px;
+      width: 250px;
       height: 1px;
     }
     @media #{$xl-layout} {
@@ -222,30 +238,33 @@ button {
       content: '';
       position: absolute;
       width: 1px;
-      height: 150px;
 
       @media #{$mobile-layout} {
         left: 2px;
         bottom: -150px;
         @include linear-gradient(to bottom, $grey, $grey, transparent);
+        height: 100px;
       }
       @media #{$tab-layout} {
         left: -63px;
         bottom: -33.8px;
         @include linear-gradient(to bottom, $grey, $grey, transparent);
         transform: rotate(123deg);
+        height: 50px;
       }
       @media #{$desktop-layout} {
         left: -63px;
         bottom: -33.8px;
         @include linear-gradient(to bottom, $grey, $grey, transparent);
         transform: rotate(123deg);
+        height: 50px;
       }
       @media #{$xl-layout} {
         left: -63px;
         bottom: -33.8px;
         @include linear-gradient(to bottom, $grey, $grey, transparent);
         transform: rotate(123deg);
+        height: 150px;
       }
     }
   }
@@ -692,15 +711,15 @@ button {
     align-self: center;
     align-items: center;
     justify-content: center;
-    width: 350px;
+    width: 300px;
     margin-top: 30px;
   }
   @media #{$tab-layout} {
-    width: 350px;
+    width: 300px;
     margin-top: 30px;
   }
   @media #{$desktop-layout} {
-    width: 350px;
+    width: 300px;
     margin-top: 10vb;
   }
   @media #{$xl-layout} {
@@ -709,8 +728,6 @@ button {
   }
 
   .advantage {
-    height: 170px;
-    width: 170px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -719,6 +736,23 @@ button {
     color: $white;
     font-size: 18px;
     position: relative;
+
+    @media #{$mobile-layout} {
+    height: 150px;
+    width: 150px;
+  }
+  @media #{$tab-layout} {
+    height: 150px;
+    width: 150px;
+  }
+  @media #{$desktop-layout} {
+    height: 150px;
+    width: 150px;
+  }
+  @media #{$xl-layout} {
+    height: 170px;
+    width: 170px;
+  }
 
     &::after {
       content: '';
@@ -765,9 +799,20 @@ button {
     }
 
     .advantage-middle {
-      font-size: 60px;
       font-weight: bold;
-      opacity: 100% !important;
+
+      @media #{$mobile-layout} {
+    font-size: 40px;
+  }
+  @media #{$tab-layout} {
+    font-size: 40px;
+  }
+  @media #{$desktop-layout} {
+    font-size: 40px;
+  }
+  @media #{$xl-layout} {
+    font-size: 60px;
+  }
 
       span {
         font-weight: normal;
