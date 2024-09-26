@@ -750,18 +750,9 @@ button {
   cursor: pointer;
   color: $white;
   font-size: 18px;
+  position: relative;
 
-  &.a-1,
-  &.a-2,
-  &.a-3,
-  &.a-4 {
-    position: relative;
-  }
-
-  &.a-1:after,
-  &.a-2:after,
-  &.a-3:after,
-  &.a-4:after {
+  &:after {
     content: '';
     position: absolute;
     left: 0;
@@ -776,35 +767,39 @@ button {
     }
   }
 
-  &.a-1:after {
+
+
+}
+
+.a-1:after {
       @include linear-gradient(to left top, rgba(255, 255, 255, 0.3), transparent, transparent);
       border-bottom: 1px solid transparent;
       border-right: 1px solid transparent;
       @include border-gradient(to left top, $grey, transparent, transparent, transparent);
   }
 
-  &.a-2:after {
+.a-2:after {
       @include linear-gradient(to right top, rgba(255, 255, 255, 0.3), transparent, transparent);
       border-bottom: 1px solid transparent;
       border-left: 1px solid transparent;
       @include border-gradient(to right top, $grey, transparent, transparent, transparent);
   }
 
-  &.a-3:after {
+.a-3:after {
       @include linear-gradient(to left bottom, rgba(255, 255, 255, 0.3), transparent, transparent);
       border-top: 1px solid transparent;
       border-right: 1px solid transparent;
       @include border-gradient(to left bottom, $grey, transparent, transparent, transparent);
   }
 
-  &.a-4:after {
+.a-4:after {
       @include linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), transparent, transparent);
       border-top: 1px solid transparent;
       border-left: 1px solid transparent;
       @include border-gradient(to right bottom, $grey, transparent, transparent, transparent);
   }
 
-  .advantage-middle {
+.advantage-middle {
     font-size: 60px;
     font-weight: bold;
     opacity: 100% !important;
@@ -814,8 +809,6 @@ button {
       font-size: 18px;
     }
   }
-
-}
 
 
 
