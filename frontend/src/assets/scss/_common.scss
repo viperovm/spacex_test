@@ -134,7 +134,7 @@ button {
   }
   @media #{$desktop-layout} {
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
     padding: 0 10px;
   }
   @media #{$xl-layout} {
@@ -151,7 +151,7 @@ button {
   background-position: center;
   position: relative;
 
-  &.image:before {
+  &.image::before {
     content: '';
     position: absolute;
     background-image: url("/mars.png");
@@ -177,7 +177,7 @@ button {
     }
   }
 
-  &.image:after {
+  &.image::after {
     content: '';
     position: absolute;
     top: calc(50% + 18vh);
@@ -210,8 +210,8 @@ button {
     @media #{$desktop-layout} {
       top: calc(50% + 18.5vh);
       right: calc(50% + 4px);
-      width: 0;
-      height: 0;
+      width: 275px;
+      height: 1px;
     }
     @media #{$xl-layout} {
       top: calc(50% + 18.5vh);
@@ -220,7 +220,7 @@ button {
       height: 1px;
     }
 
-    &:before {
+    &::before {
       content: '';
       position: absolute;
       width: 1px;
@@ -237,9 +237,10 @@ button {
         @include linear-gradient(to bottom, $grey, $grey, transparent);
       }
       @media #{$desktop-layout} {
-        left: 2px;
-        bottom: -150px;
+        left: -63px;
+        bottom: -33.8px;
         @include linear-gradient(to bottom, $grey, $grey, transparent);
+        transform: rotate(123deg);
       }
       @media #{$xl-layout} {
         left: -63px;
@@ -277,7 +278,7 @@ button {
         @include linear-gradient(to bottom, $white, $red, $red);
       }
       @media #{$desktop-layout} {
-        @include linear-gradient(to bottom, $white, $red, $red);
+        @include linear-gradient(to right, $white, $red, $red);
       }
       @media #{$xl-layout} {
         @include linear-gradient(to right, $white, $red, $red);
@@ -291,7 +292,7 @@ button {
       margin-top: 30px;
     }
     @media #{$desktop-layout} {
-      margin-top: 30px;
+      margin-top: 15vb;
     }
     @media #{$xl-layout} {
       margin-top: 15vb;
@@ -317,8 +318,7 @@ button {
       left: calc(50% - 90px);
     }
     @media #{$desktop-layout} {
-      bottom: 90px;
-      left: calc(50% - 90px);
+      top: calc(50% + 3vb);
     }
     @media #{$xl-layout} {
       top: calc(50% + 3vb);
@@ -330,7 +330,7 @@ button {
       transition: all .3s ease;
     }
 
-    &:before {
+    &::before {
       content: '';
       position: absolute;
       bottom: -1px;
@@ -342,7 +342,7 @@ button {
       transition: all .3s ease;
     }
 
-    &:hover:before {
+    &:hover::before {
       content: '';
       position: absolute;
       bottom: -1px;
@@ -353,7 +353,7 @@ button {
       border-bottom: 2px solid $white;
     }
 
-    &:after {
+    &::after {
       content: '';
       position: absolute;
       top: -1px;
@@ -365,7 +365,7 @@ button {
       transition: all .3s ease;
     }
 
-    &:hover:after {
+    &:hover::after {
       content: '';
       position: absolute;
       top: -1px;
@@ -375,21 +375,14 @@ button {
       border-right: 2px solid $white;
       border-top: 2px solid $white;
     }
-
   }
-
-
 }
 
 .logo-wrapper {
   border-width: 0 1px;
   border-style: solid;
   border-color: transparent;
-
   @include border-gradient(to left top, transparent, transparent, transparent, transparent);
-
-  //border-image: linear-gradient(to left top, transparent, transparent);
-  //border-image-slice: 1;
   transition: all .3s ease;
   position: relative;
   @media #{$mobile-layout} {
@@ -410,17 +403,13 @@ button {
   }
 
   &:hover {
-
     @include border-gradient(to left top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
-
-    //border-image: linear-gradient(to left top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
-    //border-image-slice: 1;
   }
 
-  &:before,
-  &:after,
-  &:hover:before,
-  &:hover:after {
+  &::before,
+  &::after,
+  &:hover::before,
+  &:hover::after {
     @media #{$mobile-layout} {
       height: 5px;
       width: 5px;
@@ -439,7 +428,7 @@ button {
     }
   }
 
-  &:before {
+  &::before {
     content: '';
     top: 0;
     left: 0;
@@ -449,7 +438,7 @@ button {
     position: absolute;
   }
 
-  &:hover:before {
+  &:hover::before {
     content: '';
     top: 0;
     left: 0;
@@ -457,7 +446,7 @@ button {
     border-left: 2px solid $white;
   }
 
-  &:after {
+  &::after {
     content: '';
     bottom: 0;
     left: 0;
@@ -467,7 +456,7 @@ button {
     position: absolute;
   }
 
-  &:hover:after {
+  &:hover::after {
     content: '';
     bottom: 0;
     left: 0;
@@ -502,11 +491,10 @@ button {
       padding-bottom: 10px;
     }
 
-
-    &:before,
-    &:after,
-    &:hover:before,
-    &:hover:after {
+    &::before,
+    &::after,
+    &:hover::before,
+    &:hover::after {
       @media #{$mobile-layout} {
         height: 5px;
         width: 5px;
@@ -525,7 +513,7 @@ button {
       }
     }
 
-    &:before {
+    &::before {
       content: '';
       top: 0;
       right: 0;
@@ -535,7 +523,7 @@ button {
       position: absolute;
     }
 
-    &:hover:before {
+    &:hover::before {
       content: '';
       top: 0;
       right: 0;
@@ -543,7 +531,7 @@ button {
       border-right: 2px solid $white;
     }
 
-    &:after {
+    &::after {
       content: '';
       bottom: 0;
       right: 0;
@@ -553,7 +541,7 @@ button {
       position: absolute;
     }
 
-    &:hover:after {
+    &:hover::after {
       content: '';
       bottom: 0;
       right: 0;
@@ -568,7 +556,6 @@ button {
 }
 
 .menu {
-
   @media #{$mobile-layout} {
     display: none;
   }
@@ -591,7 +578,6 @@ button {
     cursor: pointer;
     transition: all .3s ease;
     @include linear-gradient(to right, $grey, $grey, $grey);
-    //background-image: linear-gradient($grey, $grey);
     background-position: 0 100%;
     background-repeat: no-repeat;
     background-size: 0 1px;
@@ -689,7 +675,6 @@ button {
     cursor: pointer;
     transition: all .3s ease;
     @include linear-gradient(to right, $grey, $grey, $grey);
-    //background-image: linear-gradient($grey, $grey);
     background-position: 0 100%;
     background-repeat: no-repeat;
     background-size: 0 1px;
@@ -699,13 +684,11 @@ button {
       margin-bottom: 30px;
     }
 
-
     &:hover, &.active {
       color: $grey;
       background-size: 100% 1px;
     }
   }
-
 }
 
 .advantages-section {
@@ -728,11 +711,8 @@ button {
     margin-top: 30px;
   }
   @media #{$desktop-layout} {
-    align-self: center;
-    align-items: center;
-    justify-content: center;
     width: 350px;
-    margin-top: 30px;
+    margin-top: 10vb;
   }
   @media #{$xl-layout} {
     width: 350px;
@@ -751,7 +731,7 @@ button {
     font-size: 18px;
     position: relative;
 
-    &:after {
+    &::after {
       content: '';
       position: absolute;
       left: 0;
@@ -763,38 +743,37 @@ button {
 
     }
 
-    &:hover:after {
-        opacity: 100%;
-      }
+    &:hover::after {
+      opacity: 100%;
+    }
 
-    &.a-1:after {
+    &.a-1::after {
       @include linear-gradient(to left top, rgba(255, 255, 255, 0.3), transparent, transparent);
       border-bottom: 1px solid transparent;
       border-right: 1px solid transparent;
       @include border-gradient(to left top, $grey, transparent, transparent, transparent);
     }
 
-    &.a-2:after {
+    &.a-2::after {
       @include linear-gradient(to right top, rgba(255, 255, 255, 0.3), transparent, transparent);
       border-bottom: 1px solid transparent;
       border-left: 1px solid transparent;
       @include border-gradient(to right top, $grey, transparent, transparent, transparent);
     }
 
-    &.a-3:after {
+    &.a-3::after {
       @include linear-gradient(to left bottom, rgba(255, 255, 255, 0.3), transparent, transparent);
       border-top: 1px solid transparent;
       border-right: 1px solid transparent;
       @include border-gradient(to left bottom, $grey, transparent, transparent, transparent);
     }
 
-    &.a-4:after {
+    &.a-4::after {
       @include linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), transparent, transparent);
       border-top: 1px solid transparent;
       border-left: 1px solid transparent;
       @include border-gradient(to right bottom, $grey, transparent, transparent, transparent);
     }
-
 
     .advantage-middle {
       font-size: 60px;
@@ -806,10 +785,7 @@ button {
         font-size: 18px;
       }
     }
-
-
   }
-
 }
 
 
