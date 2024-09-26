@@ -43,7 +43,7 @@ const HomePage = () => {
               &&
               advantages.map((item, index) =>
                 <>
-                  <div className={`'advantage a-${index + 1}'`}>
+                  <div className={`advantage a-${index + 1}`}>
                     <div className='advantage-top'>{item.top}</div>
                     <ProperMiddle data={item.middle}/>
                     <div className='advantage-bottom'>{item.bottom}</div>
