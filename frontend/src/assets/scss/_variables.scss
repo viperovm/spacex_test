@@ -1,0 +1,45 @@
+// Font Family
+$pt: "PT Sans", sans-serif;
+
+// Colors ---------------
+
+$white: #ffffff;
+$red: #ff3f04;
+$grey: #b1b1b1;
+$blue: #2c5e9f;
+$dark-blue: #0f1f2d;
+$menu-bg: rgba(21,10,1,0.96);
+$header-bg: rgba(21,10,1,0.3);
+$header-border: rgba(225,225,225,0.2);
+$pink-primary: #FD99B3;
+$blue-primary: #163190;
+$blue-secondary: #475FB7;
+
+// Responsive Variables
+
+$mobile-layout: "only screen and (max-width: 767.9px)";
+$tab-layout: "only screen and (min-width: 768px) and (max-width: 991.9px)";
+$desktop-layout: "only screen and (min-width: 992px) and (max-width: 1189.9px)";
+$xl-layout: "only screen and (min-width: 1190px)";
+
+@mixin linear-gradient($direction, $color1, $color2, $color3) {
+  //background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, $direction, from($color1), to($color3)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient($direction, $color1, $color2, $color3); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient($direction, $color1, $color2, $color3); /* FF3.6 */
+  background-image:     -ms-linear-gradient($direction, $color1, $color2, $color3); /* IE10 */
+  background-image:      -o-linear-gradient($direction, $color1, $color2, $color3); /* Opera 11.10+ */
+  background-image:         linear-gradient($direction, $color1, $color2, $color3);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,StartColorStr='#{$color1}', EndColorStr='#{$color3}');
+
+}
+
+@mixin border-gradient($direction, $color1, $color2, $color3, $color4) {
+  border-image: -webkit-gradient(linear, $direction, from($color1), to($color2)); /* Saf4+, Chrome */
+  border-image: -webkit-linear-gradient($direction, $color1, $color2, $color3, $color4); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  border-image:    -moz-linear-gradient($direction, $color1, $color2, $color3, $color4); /* FF3.6 */
+  border-image:     -ms-linear-gradient($direction, $color1, $color2, $color3, $color4); /* IE10 */
+  border-image:      -o-linear-gradient($direction, $color1, $color2, $color3, $color4); /* Opera 11.10+ */
+  border-image:         linear-gradient($direction, $color1, $color2, $color3, $color4);
+  border-image-slice: 1;
+}

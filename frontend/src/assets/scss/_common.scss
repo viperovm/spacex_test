@@ -1,0 +1,884 @@
+@import "variables";
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: $pt;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  display: block;
+  margin: 0;
+  font-weight: 900;
+  @media #{$mobile-layout} {
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+  }
+  @media #{$tab-layout} {
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+  }
+  @media #{$desktop-layout} {
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+  }
+  @media #{$xl-layout} {
+    font-size: 58px;
+    line-height: 58px;
+    letter-spacing: 3px;
+  }
+
+  span {
+    display: block;
+    @media #{$mobile-layout} {
+      font-size: 20px;
+      line-height: 20px;
+      text-align: center;
+    }
+    @media #{$tab-layout} {
+      font-size: 20px;
+      line-height: 20px;
+      text-align: center;
+    }
+    @media #{$desktop-layout} {
+      font-size: 20px;
+      line-height: 20px;
+      text-align: center;
+    }
+    @media #{$xl-layout} {
+      font-size: 25px;
+      line-height: 25px;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+header {
+  width: 100%;
+  background-color: $header-bg;
+  border-bottom: 1px solid $header-border;
+  @media #{$mobile-layout} {
+    height: 50px;
+  }
+  @media #{$tab-layout} {
+    height: 50px;
+  }
+  @media #{$desktop-layout} {
+    height: 50px;
+  }
+  @media #{$xl-layout} {
+    height: 100px;
+  }
+
+  .container {
+    position: relative;
+    @media #{$mobile-layout} {
+      width: 100%;
+      justify-content: space-between;
+    }
+    @media #{$tab-layout} {
+      width: 100%;
+      justify-content: space-between;
+    }
+    @media #{$desktop-layout} {
+      width: 100%;
+      justify-content: space-between;
+    }
+    @media #{$xl-layout} {
+      width: 1190px;
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+}
+
+.main-section {
+  justify-content: space-between;
+  @media #{$mobile-layout} {
+    width: 100%;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  @media #{$tab-layout} {
+    width: 100%;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  @media #{$desktop-layout} {
+    width: 100%;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  @media #{$xl-layout} {
+    width: 1190px;
+    flex-direction: row;
+  }
+}
+
+.main-layout {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("/background.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &.image:before {
+    content: '';
+    position: absolute;
+    background-image: url("/mars.png");
+    background-position: center;
+    background-size: cover;
+    top: calc(50% - 29.3vh);
+    left: calc(50% - 29.3vh);
+    width: 58.6vh;
+    height: 58.6vh;
+    z-index: 1;
+
+    @media #{$mobile-layout} {
+      display: none;
+    }
+    @media #{$tab-layout} {
+      display: none;
+    }
+    @media #{$desktop-layout} {
+      display: none;
+    }
+    @media #{$xl-layout} {
+      display: block;
+    }
+  }
+
+  &.image:after {
+    content: '';
+    position: absolute;
+    top: calc(50% + 18vh);
+    right: calc(50% - 4px);
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .arrow {
+    position: absolute;
+    background-color: $grey;
+    z-index: 1;
+
+    @media #{$mobile-layout} {
+      top: calc(50% + 18.5vh);
+      right: calc(50% + 4px);
+      width: 0;
+      height: 0;
+    }
+    @media #{$tab-layout} {
+      top: calc(50% + 18.5vh);
+      right: calc(50% + 4px);
+      width: 0;
+      height: 0;
+    }
+    @media #{$desktop-layout} {
+      top: calc(50% + 18.5vh);
+      right: calc(50% + 4px);
+      width: 0;
+      height: 0;
+    }
+    @media #{$xl-layout} {
+      top: calc(50% + 18.5vh);
+      right: calc(50% + 4px);
+      width: 275px;
+      height: 1px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 150px;
+
+      @media #{$mobile-layout} {
+        left: 2px;
+        bottom: -150px;
+        @include linear-gradient(to bottom, $grey, $grey, transparent);
+      }
+      @media #{$tab-layout} {
+        left: 2px;
+        bottom: -150px;
+        @include linear-gradient(to bottom, $grey, $grey, transparent);
+      }
+      @media #{$desktop-layout} {
+        left: 2px;
+        bottom: -150px;
+        @include linear-gradient(to bottom, $grey, $grey, transparent);
+      }
+      @media #{$xl-layout} {
+        left: -63px;
+        bottom: -33.8px;
+        @include linear-gradient(to bottom, $grey, $grey, transparent);
+        transform: rotate(123deg);
+      }
+    }
+  }
+}
+
+.title-section {
+  @media #{$mobile-layout} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @media #{$tab-layout} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title {
+    &.gradient {
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      @media #{$mobile-layout} {
+        @include linear-gradient(to bottom, $white, $red, $red);
+      }
+      @media #{$tab-layout} {
+        @include linear-gradient(to bottom, $white, $red, $red);
+      }
+      @media #{$desktop-layout} {
+        @include linear-gradient(to bottom, $white, $red, $red);
+      }
+      @media #{$xl-layout} {
+        @include linear-gradient(to right, $white, $red, $red);
+      }
+    }
+
+    @media #{$mobile-layout} {
+      margin-top: 30px;
+    }
+    @media #{$tab-layout} {
+      margin-top: 30px;
+    }
+    @media #{$desktop-layout} {
+      margin-top: 30px;
+    }
+    @media #{$xl-layout} {
+      margin-top: 15vb;
+    }
+  }
+
+  .home-button {
+    position: absolute;
+    background-color: $header-bg;
+    border: 1px solid transparent;
+    color: $white;
+    padding: 15px 25px;
+    transition: all .3s ease;
+    white-space: nowrap;
+    @include border-gradient(to left top, $blue, $blue, $blue, $blue);
+
+    @media #{$mobile-layout} {
+      bottom: 90px;
+      left: calc(50% - 90px);
+    }
+    @media #{$tab-layout} {
+      bottom: 90px;
+      left: calc(50% - 90px);
+    }
+    @media #{$desktop-layout} {
+      bottom: 90px;
+      left: calc(50% - 90px);
+    }
+    @media #{$xl-layout} {
+      top: calc(50% + 3vb);
+    }
+
+    &:hover {
+      @include border-gradient(to left top, $dark-blue 10%, $blue 30%, $blue 70%, $dark-blue 90%);
+      color: $grey;
+      transition: all .3s ease;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: -1px;
+      height: 7px;
+      width: 7px;
+      border-left: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      transition: all .3s ease;
+    }
+
+    &:hover:before {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: -1px;
+      height: 7px;
+      width: 7px;
+      border-left: 2px solid $white;
+      border-bottom: 2px solid $white;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      height: 7px;
+      width: 7px;
+      border-right: 2px solid transparent;
+      border-top: 2px solid transparent;
+      transition: all .3s ease;
+    }
+
+    &:hover:after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      height: 7px;
+      width: 7px;
+      border-right: 2px solid $white;
+      border-top: 2px solid $white;
+    }
+
+  }
+
+
+}
+
+.logo-wrapper {
+  border-width: 0 1px;
+  border-style: solid;
+  border-color: transparent;
+
+  @include border-gradient(to left top, transparent, transparent, transparent, transparent);
+
+  //border-image: linear-gradient(to left top, transparent, transparent);
+  //border-image-slice: 1;
+  transition: all .3s ease;
+  position: relative;
+  @media #{$mobile-layout} {
+    height: 50px;
+    width: 158px;
+  }
+  @media #{$tab-layout} {
+    height: 50px;
+    width: 158px;
+  }
+  @media #{$desktop-layout} {
+    height: 50px;
+    width: 158px;
+  }
+  @media #{$xl-layout} {
+    height: 100px;
+    width: 315px;
+  }
+
+  &:hover {
+
+    @include border-gradient(to left top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+
+    //border-image: linear-gradient(to left top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+    //border-image-slice: 1;
+  }
+
+  &:before,
+  &:after,
+  &:hover:before,
+  &:hover:after {
+    @media #{$mobile-layout} {
+      height: 5px;
+      width: 5px;
+    }
+    @media #{$tab-layout} {
+      height: 5px;
+      width: 5px;
+    }
+    @media #{$desktop-layout} {
+      height: 5px;
+      width: 5px;
+    }
+    @media #{$xl-layout} {
+      height: 10px;
+      width: 10px;
+    }
+  }
+
+  &:before {
+    content: '';
+    top: 0;
+    left: 0;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    transition: all .3s ease;
+    position: absolute;
+  }
+
+  &:hover:before {
+    content: '';
+    top: 0;
+    left: 0;
+    border-top: 2px solid $white;
+    border-left: 2px solid $white;
+  }
+
+  &:after {
+    content: '';
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+    transition: all .3s ease;
+    position: absolute;
+  }
+
+  &:hover:after {
+    content: '';
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px solid $white;
+    border-left: 2px solid $white;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .3s ease;
+    position: relative;
+    @media #{$mobile-layout} {
+      height: 50px;
+      width: 158px;
+      padding-bottom: 5px;
+    }
+    @media #{$tab-layout} {
+      height: 50px;
+      width: 158px;
+      padding-bottom: 5px;
+    }
+    @media #{$desktop-layout} {
+      height: 50px;
+      width: 158px;
+      padding-bottom: 5px;
+    }
+    @media #{$xl-layout} {
+      height: 100px;
+      width: 315px;
+      padding-bottom: 10px;
+    }
+
+
+    &:before,
+    &:after,
+    &:hover:before,
+    &:hover:after {
+      @media #{$mobile-layout} {
+        height: 5px;
+        width: 5px;
+      }
+      @media #{$tab-layout} {
+        height: 5px;
+        width: 5px;
+      }
+      @media #{$desktop-layout} {
+        height: 5px;
+        width: 5px;
+      }
+      @media #{$xl-layout} {
+        height: 10px;
+        width: 10px;
+      }
+    }
+
+    &:before {
+      content: '';
+      top: 0;
+      right: 0;
+      border-top: 2px solid transparent;
+      border-right: 2px solid transparent;
+      transition: all .3s ease;
+      position: absolute;
+    }
+
+    &:hover:before {
+      content: '';
+      top: 0;
+      right: 0;
+      border-top: 2px solid $white;
+      border-right: 2px solid $white;
+    }
+
+    &:after {
+      content: '';
+      bottom: 0;
+      right: 0;
+      border-bottom: 2px solid transparent;
+      border-right: 2px solid transparent;
+      transition: all .3s ease;
+      position: absolute;
+    }
+
+    &:hover:after {
+      content: '';
+      bottom: 0;
+      right: 0;
+      border-bottom: 2px solid $white;
+      border-right: 2px solid $white;
+    }
+
+    img {
+      z-index: 2;
+    }
+  }
+}
+
+.menu {
+
+  @media #{$mobile-layout} {
+    display: none;
+  }
+  @media #{$tab-layout} {
+    display: none;
+  }
+  @media #{$desktop-layout} {
+    display: none;
+  }
+  @media #{$xl-layout} {
+    display: flex;
+    height: 100px;
+  }
+
+  .menu-item {
+    color: $white;
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    cursor: pointer;
+    transition: all .3s ease;
+    @include linear-gradient(to right, $grey, $grey, $grey);
+    //background-image: linear-gradient($grey, $grey);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0 1px;
+
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+
+    &:hover, &.active {
+      color: $grey;
+      background-size: 100% 1px;
+    }
+  }
+}
+
+.menu-wrapper {
+    @media #{$mobile-layout} {
+      position: absolute;
+      width: 100vw;
+      top: 50px;
+      right: -20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $white;
+      background-color: $menu-bg;
+      padding: 20px 0;
+    }
+    @media #{$tab-layout} {
+      position: absolute;
+      width: 100vw;
+      top: 50px;
+      right: -20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $white;
+      background-color: $menu-bg;
+      padding: 20px 0;
+    }
+    @media #{$desktop-layout} {
+      position: absolute;
+      width: 100vw;
+      top: 50px;
+      right: -20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $white;
+      background-color: $menu-bg;
+      padding: 20px 0;
+    }
+    @media #{$xl-layout} {
+      display: flex;
+    margin-left: 170px;
+    align-items: center;
+    height: 100px;
+    }
+  }
+
+.mobile-menu {
+  z-index: 5;
+  @media #{$mobile-layout} {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+    position: relative;
+  }
+  @media #{$tab-layout} {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+    position: relative;
+  }
+  @media #{$desktop-layout} {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+    position: relative;
+  }
+  @media #{$xl-layout} {
+    display: none;
+  }
+
+  .menu-item {
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    cursor: pointer;
+    transition: all .3s ease;
+    @include linear-gradient(to right, $grey, $grey, $grey);
+    //background-image: linear-gradient($grey, $grey);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0 1px;
+    margin-top: 30px;
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
+
+
+
+    &:hover, &.active {
+      color: $grey;
+      background-size: 100% 1px;
+    }
+  }
+
+}
+
+.advantages-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  z-index: 3;
+  @media #{$mobile-layout} {
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    margin-top: 30px;
+  }
+  @media #{$tab-layout} {
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    margin-top: 30px;
+  }
+  @media #{$desktop-layout} {
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    margin-top: 30px;
+  }
+  @media #{$xl-layout} {
+    width: 350px;
+    margin-top: 10vb;
+  }
+
+  .advantage {
+    height: 170px;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: $white;
+    font-size: 18px;
+
+    &.a-1 {
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 170px;
+        height: 170px;
+
+        @include linear-gradient(to left top, rgba(255, 255, 255, 0.3), transparent, transparent);
+
+        //background-image: linear-gradient(to left top, rgba(255, 255, 255, 0.3), transparent, transparent);
+        border-bottom: 1px solid transparent;
+        border-right: 1px solid transparent;
+
+        @include border-gradient(to left top, $grey, transparent, transparent, transparent);
+
+        //border-image: linear-gradient(to left top, $grey, transparent, transparent);
+        //border-image-slice: 1;
+        opacity: 50%;
+        transition: all .3s ease;
+      }
+
+      &:hover:after {
+        opacity: 100%;
+      }
+    }
+
+    &.a-2 {
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 170px;
+        height: 170px;
+
+        @include linear-gradient(to right top, rgba(255, 255, 255, 0.3), transparent, transparent);
+
+        //background-image: linear-gradient(to right top, rgba(255, 255, 255, 0.3), transparent, transparent);
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid transparent;
+
+        @include border-gradient(to right top, $grey, transparent, transparent, transparent);
+
+        //border-image: linear-gradient(to right top, $grey, transparent, transparent);
+        //border-image-slice: 1;
+        opacity: 50%;
+        transition: all .3s ease;
+      }
+
+      &:hover:after {
+        opacity: 100%;
+      }
+    }
+
+    &.a-3 {
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 170px;
+        height: 170px;
+
+        @include linear-gradient(to left bottom, rgba(255, 255, 255, 0.3), transparent, transparent);
+
+        //background-image: linear-gradient(to left bottom, rgba(255, 255, 255, 0.3), transparent, transparent);
+        border-top: 1px solid transparent;
+        border-right: 1px solid transparent;
+
+        @include border-gradient(to left bottom, $grey, transparent, transparent, transparent);
+
+        //border-image: linear-gradient(to left bottom, $grey, transparent, transparent);
+        //border-image-slice: 1;
+        opacity: 50%;
+        transition: all .3s ease;
+      }
+
+      &:hover:after {
+        opacity: 100%;
+      }
+    }
+
+    &.a-4 {
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 170px;
+        height: 170px;
+
+        @include linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), transparent, transparent);
+
+        //background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), transparent, transparent);
+        border-top: 1px solid transparent;
+        border-left: 1px solid transparent;
+
+        @include border-gradient(to right bottom, $grey, transparent, transparent, transparent);
+
+        //border-image: linear-gradient(to right bottom, $grey, transparent, transparent);
+        //border-image-slice: 1;
+        opacity: 50%;
+        transition: all .3s ease;
+      }
+
+      &:hover:after {
+        opacity: 100%;
+      }
+    }
+
+    .advantage-middle {
+      font-size: 60px;
+      font-weight: bold;
+      opacity: 100% !important;
+
+      span {
+        font-weight: normal;
+        font-size: 18px;
+      }
+    }
+
+  }
+}
+
+
+

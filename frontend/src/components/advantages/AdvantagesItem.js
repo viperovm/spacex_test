@@ -1,0 +1,26 @@
+import React from 'react';
+
+const AdvantagesItem = ({item, index}) => {
+
+  const ProperMiddle = ({data}) => {
+    if (data.replace(/[^a-zA-Z]/g, "")) {
+      return (
+        <div className='advantage-middle'>{data.replace(/[^0-9]/g, "")}<span>{data.replace(/[^a-zA-Z]/g, "")}</span></div>
+      )
+    } else {
+      return (
+        <div className='advantage-middle'>{data}</div>
+      )
+    }
+  }
+
+  return (
+    <div className={`'advantage a-${index + 1}'`}>
+      <div className='advantage-top'>{item.top}</div>
+      <ProperMiddle data={item.middle}/>
+      <div className='advantage-bottom'>{item.bottom}</div>
+    </div>
+  );
+};
+
+export default AdvantagesItem;
