@@ -738,77 +738,79 @@ button {
     width: 350px;
     margin-top: 10vb;
   }
-}
 
-.advantage {
-  height: 170px;
-  width: 170px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  color: $white;
-  font-size: 18px;
-  position: relative;
-
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 170px;
+  .advantage {
     height: 170px;
-    opacity: 50%;
-    transition: all .3s ease;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: $white;
+    font-size: 18px;
+    position: relative;
 
-    &:hover:after {
-      opacity: 100%;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 170px;
+      height: 170px;
+      opacity: 50%;
+      transition: all .3s ease;
+
+      &:hover:after {
+        opacity: 100%;
+      }
     }
-  }
 
-
-
-}
-
-.a-1:after {
+    &.a-1:after {
       @include linear-gradient(to left top, rgba(255, 255, 255, 0.3), transparent, transparent);
       border-bottom: 1px solid transparent;
       border-right: 1px solid transparent;
       @include border-gradient(to left top, $grey, transparent, transparent, transparent);
-  }
+    }
 
-.a-2:after {
+    &.a-2:after {
       @include linear-gradient(to right top, rgba(255, 255, 255, 0.3), transparent, transparent);
       border-bottom: 1px solid transparent;
       border-left: 1px solid transparent;
       @include border-gradient(to right top, $grey, transparent, transparent, transparent);
-  }
+    }
 
-.a-3:after {
+    &.a-3:after {
       @include linear-gradient(to left bottom, rgba(255, 255, 255, 0.3), transparent, transparent);
       border-top: 1px solid transparent;
       border-right: 1px solid transparent;
       @include border-gradient(to left bottom, $grey, transparent, transparent, transparent);
-  }
+    }
 
-.a-4:after {
+    &.a-4:after {
       @include linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), transparent, transparent);
       border-top: 1px solid transparent;
       border-left: 1px solid transparent;
       @include border-gradient(to right bottom, $grey, transparent, transparent, transparent);
-  }
-
-.advantage-middle {
-    font-size: 60px;
-    font-weight: bold;
-    opacity: 100% !important;
-
-    span {
-      font-weight: normal;
-      font-size: 18px;
     }
+
+
+    .advantage-middle {
+      font-size: 60px;
+      font-weight: bold;
+      opacity: 100% !important;
+
+      span {
+        font-weight: normal;
+        font-size: 18px;
+      }
+    }
+
+
   }
+
+}
+
 
 
 

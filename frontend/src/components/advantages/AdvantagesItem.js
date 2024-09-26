@@ -3,6 +3,11 @@ import React from 'react';
 const AdvantagesItem = ({item, index}) => {
 
   const ProperMiddle = ({data}) => {
+
+    console.log(data)
+    console.log(data.replace(/[^a-zA-Z]/g, ""))
+    console.log(data.replace(/[^0-9]/g, ""))
+
     if (data.replace(/[^a-zA-Z]/g, "")) {
       return (
         <div className='advantage-middle'>{data.replace(/[^0-9]/g, "")}<span>{data.replace(/[^a-zA-Z]/g, "")}</span></div>
@@ -15,7 +20,7 @@ const AdvantagesItem = ({item, index}) => {
   }
 
   return (
-    <div className={`'advantage a-${index + 1}'`}>
+    <div className={`advantage a-${index + 1}`}>
       <div className='advantage-top'>{item.top}</div>
       <ProperMiddle data={item.middle}/>
       <div className='advantage-bottom'>{item.bottom}</div>
