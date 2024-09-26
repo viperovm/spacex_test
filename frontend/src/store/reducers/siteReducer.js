@@ -1,7 +1,8 @@
 import * as t from "../types"
 
 const initialState = {
-  menu: [],
+  menu: false,
+  menu_items: [],
   advantages: [],
 }
 
@@ -10,18 +11,25 @@ const siteReducer = (state = initialState, action) => {
 
   switch (type) {
 
-    case t.GET_MENU_SUCCESS:
+    case t.SET_MENU:
 
       return {
         ...state,
         menu: payload,
       }
 
+    case t.GET_MENU_SUCCESS:
+
+      return {
+        ...state,
+        menu_items: payload,
+      }
+
     case t.GET_MENU_FAIL:
 
       return {
         ...state,
-        menu: [],
+        menu_items: [],
       }
 
     case t.GET_ADVANTAGES_SUCCESS:

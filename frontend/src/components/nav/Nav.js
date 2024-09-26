@@ -1,29 +1,27 @@
 import React, {useEffect, useState} from 'react';
 import NavWrapper from "./NavWrapper";
 import {useDispatch, useSelector} from "react-redux";
-import {menuAction} from "../../store/actions/siteActions";
+import {menuAction, menuItemsAction} from "../../store/actions/siteActions";
 
 const Nav = () => {
 
-  const [active, setActive] = useState()
-
   const dispatch = useDispatch()
-  const { menu } = useSelector(state => state.site)
+  const { menu_items, menu } = useSelector(state => state.site)
 
   useEffect(() => {
-    if(!menu.length) {
-      dispatch(menuAction())
+    if(!menu_items.length) {
+      dispatch(menuItemsAction())
     }
-  }, [menu])
+  }, [menu_items])
 
   return (
     <>
       <nav className="menu">
-        <NavWrapper items={menu}/>
+        <NavWrapper items={menu_items}/>
       </nav>
       <nav className="mobile-menu">
         <svg
-          onClick={() => {setActive(a => !a)}}
+          onClick={() => dispatch(menuAction(!menu))}
           className="mobile_menu_icon"
           width="26"
           height="18"
@@ -37,7 +35,7 @@ const Nav = () => {
                 strokeLinejoin="round"
           />
         </svg>
-        {active && <NavWrapper items={menu}/>}
+        {menu && <NavWrapper items={menu_items}/>}
       </nav>
     </>
   );

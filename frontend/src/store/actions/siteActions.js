@@ -2,7 +2,16 @@ import * as t from "../types"
 import axios from "axios";
 
 
-export const menuAction = () => async dispatch => {
+export const menuAction = bool => dispatch => {
+
+  dispatch({
+    type: t.SET_MENU,
+    payload: bool,
+  })
+}
+
+
+export const menuItemsAction = () => async dispatch => {
 
   const config = {
     headers: {

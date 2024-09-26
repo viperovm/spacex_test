@@ -2,23 +2,23 @@ import React, {useEffect} from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import HomePage from "../pages/home/HomePage";
 import {useDispatch, useSelector} from "react-redux";
-import {menuAction} from "../store/actions/siteActions";
+import {menuItemsAction} from "../store/actions/siteActions";
 
 const MasterRoute = () => {
 
   const dispatch = useDispatch()
-  const { menu } = useSelector(state => state.site)
+  const { menu_items } = useSelector(state => state.site)
 
   useEffect(() => {
-    if(!menu.length) {
-      dispatch(menuAction())
+    if(!menu_items.length) {
+      dispatch(menuItemsAction())
     }
-  }, [menu])
+  }, [menu_items])
 
   return (
     <BrowserRouter>
       <Routes>
-        {menu.length && menu.map(r => <Route
+        {menu_items.length && menu_items.map(r => <Route
           path={r.url}
           element={<HomePage/>}
         />)}
