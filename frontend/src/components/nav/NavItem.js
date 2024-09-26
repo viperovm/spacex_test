@@ -5,8 +5,6 @@ const NavItem = ({item}) => {
 
   const url = window.location.pathname
 
-  console.log(url)
-
   return (
     <>
       {item
