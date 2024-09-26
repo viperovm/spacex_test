@@ -7,7 +7,8 @@ SECRET_KEY = '4!12x9v*cjtjhxj7*s0%6&jt7+dn0vdsn8%)+@smckaod#1!d7'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'localhost:3000', '127.0.0.1:3000']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'localhost:3000', '127.0.0.1:3000', 'art-bid.online',
+                 'www.art-bid.online']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
