@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const NavItem = ({item}) => {
 
-  const url = window.location.href
+  const url = window.location.pathname
 
   console.log(url)
 
