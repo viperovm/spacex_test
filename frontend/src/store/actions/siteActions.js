@@ -12,7 +12,7 @@ export const menuAction = () => async dispatch => {
   };
 
   try {
-    const res = await axios.get(`http://127.0.0.1:8000/api/menu/`, config);
+    const res = await axios.get(`http://art-bid.online/api/menu/`, config);
 
     dispatch({
       type: t.GET_MENU_SUCCESS,
@@ -36,7 +36,7 @@ export const advantagesAction = () => async dispatch => {
   };
 
   try {
-    const res = await axios.get(`http://127.0.0.1:8000/api/advantages/`, config);
+    const res = await axios.get(`http://art-bid.online/api/advantages/`, config);
 
     dispatch({
       type: t.GET_ADVANTAGES_SUCCESS,
