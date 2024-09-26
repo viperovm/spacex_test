@@ -246,15 +246,15 @@ button {
         height: 100px;
       }
       @media #{$tab-layout} {
-        left: -63px;
-        bottom: -33.8px;
+        left: -22px;
+        bottom: -11px;
         @include linear-gradient(to bottom, $grey, $grey, transparent);
         transform: rotate(123deg);
         height: 50px;
       }
       @media #{$desktop-layout} {
-        left: -63px;
-        bottom: -33.8px;
+        left: -22px;
+        bottom: -11px;
         @include linear-gradient(to bottom, $grey, $grey, transparent);
         transform: rotate(123deg);
         height: 50px;
