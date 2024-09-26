@@ -188,19 +188,19 @@ button {
     z-index: 1;
     @media #{$mobile-layout} {
       top: calc(50% + 18vh);
-    right: calc(50% - 4px);
+      right: calc(50% - 4px);
     }
     @media #{$tab-layout} {
       top: calc(50% + 20vh);
-    right: calc(50% - 4px);
+      right: calc(50% - 4px);
     }
     @media #{$desktop-layout} {
       top: calc(50% + 20vh);
-    right: calc(50% - 4px);
+      right: calc(50% - 4px);
     }
     @media #{$xl-layout} {
       top: calc(50% + 18vh);
-    right: calc(50% - 4px);
+      right: calc(50% - 4px);
     }
   }
 
@@ -738,31 +738,46 @@ button {
     position: relative;
 
     @media #{$mobile-layout} {
-    height: 130px;
-    width: 130px;
-  }
-  @media #{$tab-layout} {
-    height: 130px;
-    width: 130px;
-  }
-  @media #{$desktop-layout} {
-    height: 130px;
-    width: 130px;
-  }
-  @media #{$xl-layout} {
-    height: 170px;
-    width: 170px;
-  }
+      height: 130px;
+      width: 130px;
+    }
+    @media #{$tab-layout} {
+      height: 130px;
+      width: 130px;
+    }
+    @media #{$desktop-layout} {
+      height: 130px;
+      width: 130px;
+    }
+    @media #{$xl-layout} {
+      height: 170px;
+      width: 170px;
+    }
 
     &::after {
       content: '';
       position: absolute;
       left: 0;
       top: 0;
-      width: 170px;
-      height: 170px;
       opacity: 50%;
       transition: all .3s ease;
+
+      @media #{$mobile-layout} {
+        height: 130px;
+        width: 130px;
+      }
+      @media #{$tab-layout} {
+        height: 130px;
+        width: 130px;
+      }
+      @media #{$desktop-layout} {
+        height: 130px;
+        width: 130px;
+      }
+      @media #{$xl-layout} {
+        height: 170px;
+        width: 170px;
+      }
 
     }
 
@@ -802,17 +817,17 @@ button {
       font-weight: bold;
 
       @media #{$mobile-layout} {
-    font-size: 40px;
-  }
-  @media #{$tab-layout} {
-    font-size: 40px;
-  }
-  @media #{$desktop-layout} {
-    font-size: 40px;
-  }
-  @media #{$xl-layout} {
-    font-size: 60px;
-  }
+        font-size: 40px;
+      }
+      @media #{$tab-layout} {
+        font-size: 40px;
+      }
+      @media #{$desktop-layout} {
+        font-size: 40px;
+      }
+      @media #{$xl-layout} {
+        font-size: 60px;
+      }
 
       span {
         font-weight: normal;
